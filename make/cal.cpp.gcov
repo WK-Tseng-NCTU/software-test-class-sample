@@ -1,0 +1,38 @@
+        -:    0:Source:../cal/cal.cpp
+        -:    0:Graph:cal.gcno
+        -:    0:Data:cal.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <iostream>
+        -:    2://#include <stdexcept>
+        -:    3:using namespace std;
+        -:    4:
+        -:    5:int cal(char op, float num1, float num2)
+        -:    6:{
+        5:    7:	int ans =0;
+        -:    8:
+        5:    9:	switch(op)
+        -:   10:	{
+        -:   11:		case '+':
+        1:   12:			ans = num1+num2;
+        1:   13:			break;
+        -:   14:
+        -:   15:		case '-':
+        1:   16:			ans = num1-num2;
+        1:   17:			break;
+        -:   18:
+        -:   19:		case '*':
+        1:   20:			ans = num1*num2;
+        1:   21:			break;
+        -:   22:
+        -:   23:		case '/':
+        1:   24:			ans = num1/num2;
+        1:   25:			break;
+        -:   26:
+        -:   27:		default:
+        -:   28:			// If the operator is other than +, -, * or /,
+        -:   29:			//error message is shown
+        2:   30:			throw std::out_of_range("error op: " + op);
+        -:   31:			break;
+        -:   32:	}
+        4:   33:	return ans;}
